@@ -1,0 +1,12 @@
+{
+  "global-search:open": [],
+  "app:reload": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
+  ]
+}
