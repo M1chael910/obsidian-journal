@@ -16,7 +16,7 @@ const momentUnits = {
 export function buildDateVariableRegexp(name: string): RegExp {
   return new RegExp(
     // eslint-disable-next-line @cspell/spellchecker
-    `{{\\s*(${name})\\s*((?<math>[+-]\\d+)(?<unit>[yqmwd]))?\\s*(<(?<shift>start|end)Of=(?<shiftTo>.*?)>)?\\s*(:(?<format>.*?))?}}`,
+    String.raw`{{\s*(${name})\s*((?<math>[+-]\d+)(?<unit>[yqmwd]))?\s*(<(?<shift>start|end)Of=(?<shiftTo>.*?)>)?\s*(:(?<format>.*?))?}}`,
     "gi",
   );
 }

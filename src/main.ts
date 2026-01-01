@@ -112,7 +112,7 @@ export default class JournalPluginImpl extends Plugin implements JournalPlugin {
   }
 
   get shelves(): ShelfSettings[] {
-    return Object.values(this.#config.value.shelves).sort((a, b) => a.name.localeCompare(b.name));
+    return Object.values(this.#config.value.shelves).toSorted((a, b) => a.name.localeCompare(b.name));
   }
 
   get commands(): PluginCommand[] {
@@ -124,7 +124,7 @@ export default class JournalPluginImpl extends Plugin implements JournalPlugin {
   }
 
   get journals(): Journal[] {
-    return Object.values(this.#journals.value).sort((a, b) => a.name.localeCompare(b.name));
+    return Object.values(this.#journals.value).toSorted((a, b) => a.name.localeCompare(b.name));
   }
 
   hasJournal(name: string): boolean {

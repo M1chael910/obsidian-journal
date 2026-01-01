@@ -15,7 +15,7 @@ export class IconSuggest extends AbstractInputSuggest<string> {
       .filter((icon) => {
         return icon.toLocaleLowerCase().includes(search);
       })
-      .sort();
+      .toSorted();
   }
   renderSuggestion(value: string, element: HTMLElement): void {
     const icon = getIcon(value);
